@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "amplifyappe157a9ea": {}
+      },
+      "api": {
+        "notesapp": {}
+      },
+      "storage": {
+        "s3205d254b": {}
       }
     }
   }
