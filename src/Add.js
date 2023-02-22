@@ -47,6 +47,7 @@ const App = ({ signOut }) => {
     const data = {
       name: form.get("name"),
       description: form.get("description"),
+      tel: form.get("tel"),
       image: image.name,
     };
     if (!!data.image) await Storage.put(data.name, image);
@@ -89,6 +90,14 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
+          <TextField
+            name="tel"
+            placeholder="Note Tel"
+            label="Note Tel"
+            labelHidden
+            variation="quiet"
+            required
+          />
           <View
             name="image"
             as="input"
@@ -113,6 +122,7 @@ const App = ({ signOut }) => {
           {note.name}
         </Text>
         <Text as="span">{note.description}</Text>
+        <Text as="span">{note.tel}</Text>
         {note.image && (
           <Image
             src={note.image}        
